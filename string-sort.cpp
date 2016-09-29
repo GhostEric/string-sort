@@ -12,8 +12,6 @@ int countb = 0;
 
 void sort(vector<string> a, vector<string> b);
 
-int judge(int i, int j);
-
 int main()
 {
 	//int inpt=0;
@@ -26,15 +24,15 @@ int main()
 	}
 	counta--;
 
-	//------------------------½«a[i]²åÈëb[i]ÖĞµÄÕıÈ·Î»ÖÃ---------------------------------//
+	//------------------------å°†a[i]æ’å…¥b[i]ä¸­çš„æ­£ç¡®ä½ç½®---------------------------------//
 
 	for (int i = 0; i < counta; i++)
 	{
 		//string end;
 		for (int j = 0; j < countb; j++)
 		{
-			//Èç¹ûa[i]µÄµÚÒ»¸ö×ÖÄ¸Ğ¡ÓÚb[j]µÄµÚÒ»¸ö×ÖÄ¸
-			//½«a[i]²åÈëµ½b[j]Ö®Ç°µÄÎ»ÖÃ
+			//æ‰¾åˆ°ç¬¬ä¸€ä¸ªå¤§äºa[i]çš„b[j]
+			//å°†a[i]æ’å…¥åˆ°b[j]ä¹‹å‰çš„ä½ç½®
 			if (a[i]<b[j])
 			{
 				b.insert(b.begin() + j, a[i]);
@@ -62,16 +60,4 @@ int main()
 	//a.push_back("long");
 	system("pause");
 	return 0;
-}
-
-
-
-int judge(int i, int j)
-{
-	static int  k = 1;
-	if (a[1].at(k) == b[1].at(k)) {
-		k++;
-		judge(i, j);
-	}
-	else return k;
 }
